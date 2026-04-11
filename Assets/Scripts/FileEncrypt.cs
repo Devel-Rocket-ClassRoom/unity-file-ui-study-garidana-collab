@@ -1,4 +1,6 @@
 using System.IO;
+using System.Xml.Linq;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class FileEncrypt : MonoBehaviour
@@ -27,6 +29,7 @@ public class FileEncrypt : MonoBehaviour
         }
         else
         {
+            // 만들어진 폴더가 없을 시 폴더 생성
             Directory.CreateDirectory(secretFileDir);
             Debug.Log ($"폴더 생성됨 : {secretFileDir}");
         }
@@ -49,21 +52,53 @@ public class FileEncrypt : MonoBehaviour
         // 2-2 FileStream으로 secretFile.txt 열기
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // 파일 스트림 생성 (FileMode.Open은 쓰기/읽기 모두 가능)
             using (FileStream fs = new FileStream(secretFilePath, FileMode.Open))
             {
                 Debug.Log($"읽기 가능 : {fs.CanRead}");
                 Debug.Log($"쓰기 가능 : {fs.CanWrite}");
 
-                // 첫 번째 바이트 읽기 (1바이트씩 읽기)
-                int b = fs.ReadByte();
-                Debug.Log($"첫 번째 바이트 : {b} ('{(char)b}')");
-
-                byte[] buffer = new byte[15];
-                int bytesRead = fs.Read(buffer, 0 , buffer.Length);
-                Debug.Log ($"읽은 바이트 수 : {bytesRead}");
+                // File Stream (Open) 중 암호화
+                // FileStream writer 생성 (FileMode.Create)
+                using (FileStream fsWriter = new (encryptedPath, FileMode.Create))
+                {
+                    int b;
+                    while ((b = fs.ReadByte()) != -1)
+                    {
+                        // 지정된 키 값(0xAB)으로 암호화 (XOR 연산) 진행
+                        fsWriter.WriteByte((byte)(b ^ 0xAB));
+                    }
+                }
+                Debug.Log($"암호화 완료 (파일 크기 : {new FileInfo(encryptedPath).Length} bytes)");
             }
-            
+        }
 
+        // 2-3 복호화 D
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            using (FileStream dfs = new FileStream(encryptedPath, FileMode.Open))
+            {
+                Debug.Log ($"읽기 가능 : {dfs.CanRead}");
+                Debug.Log($"쓰기 가능 : {dfs.CanWrite}");
+
+                using (FileStream dfsWriter = new (decryptedPath, FileMode.Create))
+                {
+                    int b;
+                    while ((b = dfs.ReadByte()) != -1)
+                    {
+                        // 키 다시 적용하여 암호해독
+                        dfsWriter.WriteByte((byte)(b ^ 0xAB));
+                    }
+                }
+            }
+            // 암호완료 파일 읽기
+            string decryptedText = File.ReadAllText(decryptedPath);
+            // 원본 파일 읽기
+            string originalText = File.ReadAllText(secretFilePath);
+
+            Debug.Log ($"복호화 완료");
+            Debug.Log ($"복호화 결과 : {decryptedText}");
+            Debug.Log ($"원본과 일치 : {decryptedText == originalText}");
         }
     }
 }
