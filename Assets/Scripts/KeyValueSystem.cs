@@ -97,3 +97,5 @@ public class KeyValueSystem : MonoBehaviour
         }
     }
 }
+
+// 세이브 로드는 자주 하지 않는게 좋음
