@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
+
+
+// CSV Dictionary로 변환 (추상 클래스 DataTable 상속받음)
+
+
 public class StringTable : DataTable
 {
     public class Data
@@ -19,8 +24,9 @@ public class StringTable : DataTable
 
         var path = string.Format(FormatPath, filename);
         TextAsset textAsset = Resources.Load<TextAsset>(path);
+        // CSV를 {Id, String}로 파싱
         var list = LoadCSV<Data>(textAsset.text);
-        // 딕셔너리에 불러온 내용 쓰기 (추가)
+        // 딕셔너리에 CSV에서불러온 중복 체크후 내용 쓰기 (추가)
         foreach (Data data in list)
         {
             if (!table.ContainsKey(data.Id))
