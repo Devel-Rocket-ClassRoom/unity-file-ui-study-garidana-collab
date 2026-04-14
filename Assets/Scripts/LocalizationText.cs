@@ -10,7 +10,7 @@ public class LocalizationText : MonoBehaviour
     public string id;
     public TextMeshProUGUI text;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         if (Application.isPlaying)
         {
@@ -42,7 +42,7 @@ public class LocalizationText : MonoBehaviour
 #endif
     }
 
-    private void OnChangedId()
+    public void OnChangedId()
     {
         text.text = DataTableManager.StringTable.Get(id);
     }

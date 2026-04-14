@@ -1,4 +1,21 @@
-Id,String
-Hello,히사시부리
-Bye,사요나라
-You Die,오마에와모신데이루
+﻿Id,String
+,
+HELLO,やあ
+BYE,じゃあな
+YOU DIE,あなたは死ぬ
+Item1Name,剣
+Item2Name,盾
+Item3Name,弓
+Item4Name,ポーション
+Item1Desc,これは剣だ。
+Item2Desc,これは盾だ。
+Item3Desc,これは弓だ。
+Item4Desc,これはポーションだ。
+Character1Name,첫째
+Character2Name,둘째
+Character3Name,셋째
+Character4Name,넷째
+Character1Desc,처음태어난아들
+Character2Desc,두번째로태어난딸
+Character3Desc,세번째로태어난아들
+Character4Desc,네번째로태어난딸

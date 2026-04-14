@@ -1,4 +1,21 @@
 ﻿Id,String
-Hello,안녕
-Bye,잘가
-You Die,사망
+,
+HELLO,안녕
+BYE,잘가
+YOU DIE,사망
+Item1Name,검
+Item2Name,방패
+Item3Name,활 
+Item4Name,포션 
+Item1Desc,이건검이다.
+Item2Desc,이건방패다.
+Item3Desc,이건활이다.
+Item4Desc,이건포션이다.
+Character1Name,맏아들
+Character2Name,둘째딸
+Character3Name,셋째아들내미
+Character4Name,막내딸
+Character1Desc,처음나온아기
+Character2Desc,두번째로나온아기
+Character3Desc,세번째로나온아기
+Character4Desc,네번째로나온아기
