@@ -19,3 +19,11 @@ Character1Desc,처음나온아기
 Character2Desc,두번째로나온아기
 Character3Desc,세번째로나온아기
 Character4Desc,네번째로나온아기
+Character1Attack,공격력 : 100
+Character2Attack,공격력 : 50
+Character3Attack,공격력 : 25
+Character4Attack,공격력 : 1
+Character1Defense,방어력 : 100
+Character2Defense,방어력 : 50
+Character3Defense,방어력 : 25
+Character4Defense,방어력 : 2

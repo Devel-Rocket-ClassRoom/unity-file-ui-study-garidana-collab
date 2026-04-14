@@ -8,6 +8,8 @@ public class CharacterTableTest2 : MonoBehaviour
     public Image icon;
     public LocalizationText textName;
     public LocalizationText textDesc;
+    public LocalizationText textAttack;
+    public LocalizationText textDefense;
 
 
     public void OnEnable()
@@ -21,6 +23,9 @@ public class CharacterTableTest2 : MonoBehaviour
         textDesc.id = string.Empty;
         textName.text.text = string.Empty;
         textDesc.text.text = string.Empty;
+        textAttack.text.text = string.Empty;
+        textDefense.text.text = string.Empty;
+
     }
 
     public void SetCharData(string charId)
@@ -34,8 +39,12 @@ public class CharacterTableTest2 : MonoBehaviour
         icon.sprite = data.SpriteIcon;
         textName.id = data.Name;
         textDesc.id = data.Desc;
+        textAttack.id = data.Attack;
+        textDefense.id = data.Defense;
 
         textName.OnChangedId();
         textDesc.OnChangedId();
+        textAttack.OnChangedId();
+        textDefense.OnChangedId();
     }
 }

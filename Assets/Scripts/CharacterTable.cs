@@ -11,13 +11,15 @@ public class CharacterData
     // public CharTypes Type{get; set;}
     public string Name {get;set;}
     public string Desc {get; set;}
-    public int Attack {get; set;}
-    public int Defense {get; set;}
+    public string Attack {get; set;}
+    public string Defense {get; set;}
 
     public string Icon {get; set;}
 
     public string StringName => DataTableManager.StringTable.Get(Name);
     public string StringDesc => DataTableManager.StringTable.Get(Desc);
+    public string StringAttack => DataTableManager.StringTable.Get(Attack);
+    public string StringDefense => DataTableManager.StringTable.Get(Defense);
     public Sprite SpriteIcon => Resources.Load<Sprite>($"Icon/{Icon}");
 
     public override string ToString()

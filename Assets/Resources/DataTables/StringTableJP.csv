@@ -11,11 +11,19 @@ Item1Desc,これは剣だ。
 Item2Desc,これは盾だ。
 Item3Desc,これは弓だ。
 Item4Desc,これはポーションだ。
-Character1Name,첫째
-Character2Name,둘째
-Character3Name,셋째
-Character4Name,넷째
-Character1Desc,처음태어난아들
-Character2Desc,두번째로태어난딸
-Character3Desc,세번째로태어난아들
-Character4Desc,네번째로태어난딸
+Character1Name,첫째 (일본어로)
+Character2Name,둘째 (일본어로)
+Character3Name,셋째 (일본어로)
+Character4Name,넷째 (일본어로)
+Character1Desc,처음태어난아들 (일본어로)
+Character2Desc,두번째로태어난딸 (일본어로)
+Character3Desc,세번째로태어난아들 (일본어로)
+Character4Desc,네번째로태어난딸 (일본어로)
+Character1Attack,공격력(일본어로) : 100
+Character2Attack,공격력(일본어로) : 50
+Character3Attack,공격력(일본어로) : 25
+Character4Attack,공격력(일본어로) : 1
+Character1Defense,방어력(일본어로) : 100
+Character2Defense,방어력(일본어로) : 50
+Character3Defense,방어력(일본어로) : 25
+Character4Defense,방어력(일본어로) : 2
