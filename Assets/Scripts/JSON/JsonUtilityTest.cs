@@ -19,6 +19,13 @@ public class PlayerInfo
 
 public class JsonUtilityTest : MonoBehaviour
 {
+        /// <summary>
+        /// Save player information to a file and load from the file.
+        /// </summary>
+        /// <remarks>
+        /// Save: If the '1' key is pressed, a <see cref="PlayerInfo"/> object is created and saved to a file.
+        /// Load: If the '2' key is pressed, the contents of the file are read and used to overwrite a <see cref="PlayerInfo"/> object.
+        /// </remarks>
     private void Update()
     {
         // Save
@@ -46,8 +53,8 @@ public class JsonUtilityTest : MonoBehaviour
                 pathFolder,
                 "player.json"
                 );
-
-            string json = JsonUtility.ToJson(obj, prettyPrint: true);
+            
+            string json = JsonUtility.ToJson(obj, prettyPrint: true); // json 문자열로 변환
             File.WriteAllText(path, json);
 
             Debug.Log(path);

@@ -67,5 +67,33 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "unity-file-ui-study-garidana-collab.slnx"
+    "dotnet.defaultSolution": "unity-file-ui-study-garidana-collab.slnx",
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // LANGUAGE — C# / UNITY
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.snippetSuggestions": "top"
+    },
+    "csharp.debug.console": "externalTerminal",
+    "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+    "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
+    "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
+    "csharp.inlayHints.enableInlayHintsForTypes": true,
+    "dotnet.typeMembers.propertyGenerationBehavior": "preferAutoProperties",
+    "dotnet.codeLens.enableReferencesCodeLens": true,
+    "dotnet.inlayHints.enableInlayHintsForIndexerParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForLiteralParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForOtherParameters": true,
+    "dotnet.inlayHints.enableInlayHintsForParameters": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatDifferOnlyBySuffix": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchArgumentName": true,
+    "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchMethodIntent": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "unity-code-snippets.style": "allman",
+    "vstuc.displayBackgroundProcesses": true,
+    "vstuc.refreshOnSave": false,
 }

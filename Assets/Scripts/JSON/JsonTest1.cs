@@ -1,10 +1,10 @@
-using Newtonsoft.Json;
+using Newtonsoft.Json; // Json관련 메서드 사용 가능 using 문
 using System;
 using System.IO;
 using UnityEngine;
 
-// [Serializable] 붙은 것만 직렬화 역직렬화 지원
-[Serializable]
+// [Serializable] 어트리뷰트가 붙은 것만 직렬화 역직렬화 지원
+[Serializable] // 이게 있어야 SerializeObject, DeserializeObject 사용가능
 public class PlayerState
 {
     public string playerName;
@@ -40,7 +40,7 @@ public class JsonTest1 : MonoBehaviour
                 playerName = "ABC",
                 lives = 10,
                 health = 10.999f,
-                playerPosition = new Vector3(2f, 2f, 3f)
+                playerPosition = new Vector3(3f, 4f, 5f)
             };
 
             string pathFolder = Path.Combine(
