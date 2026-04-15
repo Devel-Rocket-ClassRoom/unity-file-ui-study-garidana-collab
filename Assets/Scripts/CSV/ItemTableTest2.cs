@@ -38,9 +38,4 @@ public class ItemTableTest2 : MonoBehaviour
         textName.OnChangedId();
         textDesc.OnChangedId();
     }
-
-    public void OnClick()
-    {
-        
-    }
 }

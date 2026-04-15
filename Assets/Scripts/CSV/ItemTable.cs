@@ -16,6 +16,7 @@ public class ItemData
 
     public string Icon {get; set;}
 
+    // 단축메서드 역할의 필드
     public string StringName => DataTableManager.StringTable.Get(Name);
     public string StringDesc => DataTableManager.StringTable.Get(Desc);
     public Sprite SpriteIcon => Resources.Load<Sprite>($"Icon/{Icon}");
