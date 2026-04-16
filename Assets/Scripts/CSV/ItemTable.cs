@@ -7,14 +7,14 @@ using UnityEngine;
 
 public class ItemData
 {
-    public string Id {get; set;}
-    public ItemTypes Type{get; set;}
-    public string Name {get;set;}
-    public string Desc {get; set;}
-    public int Value {get; set;}
-    public int Cost {get; set;}
+    public string Id { get; set; }
+    public ItemTypes Type { get; set; }
+    public string Name { get; set; }
+    public string Desc { get; set; }
+    public int Value { get; set; }
+    public int Cost { get; set; }
 
-    public string Icon {get; set;}
+    public string Icon { get; set; }
 
     // 단축메서드 역할의 필드
     public string StringName => DataTableManager.StringTable.Get(Name);
@@ -26,14 +26,14 @@ public class ItemData
         return $"{Id} / {Type} / {Name} / {Desc} / {Value} / {Cost} / {Icon}";
     }
 
-    
+
 }
 
 public class ItemTable : DataTable
 {
-    private readonly Dictionary <string, ItemData> table = new ();
+    private readonly Dictionary<string, ItemData> table = new();
 
-    public override void Load (string filename)
+    public override void Load(string filename)
     {
         table.Clear();
 
@@ -61,6 +61,17 @@ public class ItemTable : DataTable
             Debug.LogError("아이템 아이디 없음");
             return null;
         }
-        return table [id];
+        return table[id];
+    }
+
+    public List<string> GetItem()
+    {
+        var itemList = new List<string>();
+        foreach (ItemData item in table.Values)
+        {
+            itemList.Add(item.Id);
+        }
+
+        return itemList;
     }
 }
