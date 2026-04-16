@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087bed78ed4ea244e99ba1568c0deee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartWindow
-  firstSelected: {fileID: 210691054}
+  firstSelected: {fileID: 0}
   continueButton: {fileID: 210691056}
   startButton: {fileID: 306742249}
   optionButton: {fileID: 1214830191}
@@ -317,17 +317,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6286562162623989125, guid: 982ea207a6398fc489b4a14b79581add, type: 3}
   m_PrefabInstance: {fileID: 210691052}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &210691054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8276684423095323881, guid: 982ea207a6398fc489b4a14b79581add, type: 3}
-  m_PrefabInstance: {fileID: 210691052}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &210691056 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3972377282899049845, guid: 982ea207a6398fc489b4a14b79581add, type: 3}
   m_PrefabInstance: {fileID: 210691052}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210691054}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}

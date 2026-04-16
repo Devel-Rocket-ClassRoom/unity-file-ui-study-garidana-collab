@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+// 유니티 어디에도 붙어있지 않은 클래스 
+// 윈도우 매니저
 public class GenericWindow : MonoBehaviour
 {
     // 윈도우 열리자마자 포커스를 줄 오브젝트
