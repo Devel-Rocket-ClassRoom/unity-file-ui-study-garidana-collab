@@ -13,7 +13,7 @@ public class GenericWindow : MonoBehaviour
 
     public void Init(WindowManager mng)
     {
-        mng = windowManager;
+        windowManager = mng;
     }
 
 

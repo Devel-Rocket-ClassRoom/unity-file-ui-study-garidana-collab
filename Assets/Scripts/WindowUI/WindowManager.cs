@@ -7,10 +7,6 @@ public class WindowManager : MonoBehaviour
 {
     public GenericWindow[] windows;
 
-
-
-
-
     public int currentWindowId;
     public int defaultWindowId;
 
