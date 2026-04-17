@@ -1,31 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartWindow : GenericWindow
+
+public class StartWindowCopy : GenericWindowCopy
 {
     public Button continueButton;
     public Button startButton;
     public Button optionButton;
-    public bool canContinue; // 인스펙터에 버튼이 생성됨
-
+    public bool canContinue;
 
     private void Awake()
     {
-        continueButton.onClick.AddListener(OnContinue); // 델리게이트 개념 이벤트 
+        continueButton.onClick.AddListener(OnContinue);
         startButton.onClick.AddListener(OnNewGame);
         optionButton.onClick.AddListener(OnOption);
     }
 
-    // private void Start()
-    // {
-    //     Open();
-    // }
-
-
     public override void Open()
     {
         continueButton.gameObject.SetActive(canContinue);
-
 
         if (!canContinue)
         {
@@ -33,6 +26,7 @@ public class StartWindow : GenericWindow
         }
         base.Open();
     }
+
     public override void Close()
     {
         base.Close();
@@ -42,13 +36,11 @@ public class StartWindow : GenericWindow
     {
         windowManager.Open(1);
     }
-
     public void OnNewGame()
     {
         windowManager.Open(2);
         Debug.Log("OnNewGame()");
     }
-
     public void OnOption()
     {
         windowManager.Open(3);
