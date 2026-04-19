@@ -33,6 +33,7 @@ public class GameOverWindowCopy : GenericWindowCopy
 
         for (int i = 1; i < 4; i++)
         {
+            // 0.5초 딜레이주기
             yield return new WaitForSeconds(delayTime);
 
             leftStatLabel.text += "\n";
