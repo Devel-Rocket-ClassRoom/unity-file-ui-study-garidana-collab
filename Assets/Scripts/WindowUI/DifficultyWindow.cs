@@ -1,16 +1,36 @@
+
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+
+
+
+// private class DifficultyData
+// {
+//     public int difficultyIndex;
+// }
 
 public class DifficultyWindow : GenericWindow
 {
     public Toggle[] toggles;
     public int selected;
+    public Button saveButton;
+    public Button loadButton;
+
+    private string savePathDir;
+    private string savePath;
 
     private void Awake()
     {
         toggles[0].onValueChanged.AddListener(OnEasy);
         toggles[1].onValueChanged.AddListener(OnNormal);
         toggles[2].onValueChanged.AddListener(OnHard);
+
+        saveButton.onClick.AddListener(OnSave);
+        loadButton.onClick.AddListener(OnLoad);
+
+        savePathDir = Path.Combine(Application.persistentDataPath, "DifficultyData");
+        savePath = Path.Combine(Application.persistentDataPath, "DifficultyData", "difficulty.Json");
     }
 
 
@@ -29,6 +49,7 @@ public class DifficultyWindow : GenericWindow
     {
         if (active)
         {
+            selected = 0;
             Debug.Log("OnEasy");
         }
     }
@@ -36,6 +57,7 @@ public class DifficultyWindow : GenericWindow
     {
         if (active)
         {
+            selected = 1;
             Debug.Log("OnNormal");
         }
     }
@@ -43,8 +65,34 @@ public class DifficultyWindow : GenericWindow
     {
         if (active)
         {
+            selected = 2;
             Debug.Log("OnHard");
         }
     }
 
+    private void OnSave()
+    {
+        if (!Directory.Exists(savePathDir))
+        {
+            Directory.CreateDirectory(savePathDir);
+        }
+        else
+        {
+            Debug.Log("SaveDirectory already Exist");
+        }
+
+        File.WriteAllText(savePath, selected.ToString());
+        Debug.Log($"Difficulty Saved : {selected}");
+    }
+    private void OnLoad()
+    {
+        if (!File.Exists(savePath))
+        {
+            Debug.LogWarning("Save File Not Found");
+            return;
+        }
+        selected = int.Parse(File.ReadAllText(savePath));
+        toggles[selected].isOn = true;
+        Debug.Log($"Difficulty Loaded : {selected}");
+    }
 }

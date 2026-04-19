@@ -13,9 +13,7 @@ public class PlayerInfoCopy
     public Dictionary<string, int> scores = new()
     {
         { "stage1", 100 },
-        { "stage2", 200 },
-        { "stage3", 300 }
-    };
+        { "stage2", 200 },    };
 }
 
 public class JsonUtilityTestCopy : MonoBehaviour
