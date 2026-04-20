@@ -45,7 +45,7 @@ public class DifficultyWindow : GenericWindow
         base.Close();
     }
 
-    public void OnEasy(bool active)
+    public void OnEasy(bool active) // 토클은 true false 모두 이벤트 발생하기 때문에
     {
         if (active)
         {
@@ -69,6 +69,12 @@ public class DifficultyWindow : GenericWindow
             Debug.Log("OnHard");
         }
     }
+
+    private void OnCancel()
+    {
+        windowManager.Open(0);
+    }
+
 
     private void OnSave()
     {

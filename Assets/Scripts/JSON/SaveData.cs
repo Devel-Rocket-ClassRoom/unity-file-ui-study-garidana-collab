@@ -36,7 +36,6 @@ public class SaveDataV2 : SaveData
     public int Gold = 0;
 
 
-
     public SaveDataV2()
     {
         Version = 2;
@@ -60,16 +59,37 @@ public class SaveDataV2 : SaveData
 [System.Serializable]
 public class SaveDataV3 : SaveData
 {
-
-
-
-
     public string Name { get; set; } = string.Empty; //  초기값 비어있음
     public int Gold = 0;
-    public List<string> ItemId { get; set; } = new List<string>();
+    public List<string> ItemList { get; set; } = new List<string>();
     public SaveDataV3()
     {
         Version = 3;
+    }
+
+    public override SaveData VersionUp()
+    {
+        SaveDataV4 data = new();
+        data.Name = Name;
+        data.Gold = Gold;
+        foreach (var id in ItemList)
+        {
+            SaveItemData itemData = new();
+            itemData.itemData = DataTableManager.ItemTable.Get(id);
+
+            data.ItemList.Add(itemData);
+        }
+        return data;
+    }
+}
+
+[System.Serializable]
+public class SaveDataV4 : SaveDataV2
+{
+    public List<SaveItemData> ItemList { get; set; } = new List<SaveItemData>();
+    public SaveDataV4()
+    {
+        Version = 4;
     }
 
     public override SaveData VersionUp()

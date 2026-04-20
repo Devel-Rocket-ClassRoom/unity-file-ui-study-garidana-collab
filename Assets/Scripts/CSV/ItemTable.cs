@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Unity.VisualScripting;
 using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
@@ -33,6 +34,8 @@ public class ItemTable : DataTable
 {
     private readonly Dictionary<string, ItemData> table = new();
 
+    private List<string> keyList;
+
     public override void Load(string filename)
     {
         table.Clear();
@@ -52,6 +55,7 @@ public class ItemTable : DataTable
                 Debug.LogError("아이템 아이디 중복");
             }
         }
+        keyList = table.Keys.ToList(); // 리스트 객체 생성
     }
 
     public ItemData Get(string id)
@@ -73,5 +77,10 @@ public class ItemTable : DataTable
         }
 
         return itemList;
+    }
+
+    public ItemData GetRandom()
+    {
+        return Get(keyList[Random.Range(0, keyList.Count)]);
     }
 }
