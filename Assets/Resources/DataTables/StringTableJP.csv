@@ -31,14 +31,16 @@ Character1Defense,방어력(일본어로) : 100
 Character2Defense,방어력(일본어로) : 50
 Character3Defense,방어력(일본어로) : 25
 Character4Defense,방어력(일본어로) : 2
-Name,이름 (일본어로)
-Desc,설명 (일본어로)
-Type,타입 (일본어로)
-Value,밸류 (일본어로)
-Cost,코스트 (일본어로)
-Weapon,무기 (일본어로)
-Equip,장비 (일본어로)
-Consumable,소모품 (일본어로)
+NAME,이름 (일본어로)
+DESC,설명 (일본어로)
+TYPE,타입 (일본어로)
+VALUE,밸류 (일본어로)
+COST,코스트 (일본어로)
+ATTACK,공격력
+DEFENSE,방어력
+WEAPON,무기 (일본어로)
+EQUIP,장비 (일본어로)
+CONSUMABLE,소모품 (일본어로)
 SAVE,SAVE (일본어로)
 LOAD,LOAD (일본어로)
 ADDITEM,AddItem (일본어로)
@@ -48,6 +50,3 @@ DATEDESCEND,Date (Descend) (일본어로)
 NAMEASCEND,Name (Ascend) (일본어로)
 NAMEDESCEND,Name (Descend) (일본어로)
 NONE,None (일본어로)
-WEAPON,Weapon (일본어로)
-EQUIP,Equip (일본어로)
-CONSUMABLE,Consumble (일본어로)

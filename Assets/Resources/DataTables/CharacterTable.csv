@@ -2,4 +2,4 @@ Id,Name,Desc,Attack,Defense,Icon
 Char1,Character1Name,Character1Desc,100,100,Icon_Helmet02
 Char2,Character2Name,Character2Desc,10,10,Icon_Skull03
 Char3,Character3Name,Character3Desc,120,140,Icon_Skull02
-Char4,Character4Name,Character4Desc,150,Character4Defense200,Icon_Skull01
+Char4,Character4Name,Character4Desc,150,200,Icon_Skull01

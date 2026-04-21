@@ -1,20 +1,18 @@
 using System.Collections.Generic;
-using System.IO;
-using Unity.VisualScripting;
-using Unity.VisualScripting.ReorderableList;
+using System.Linq;
 using UnityEngine;
 
 
 public class CharacterData
 {
-    public string Id {get; set;}
+    public string Id { get; set; }
     // public CharTypes Type{get; set;}
-    public string Name {get;set;}
-    public string Desc {get; set;}
-    public string Attack {get; set;}
-    public string Defense {get; set;}
+    public string Name { get; set; }
+    public string Desc { get; set; }
+    public string Attack { get; set; }
+    public string Defense { get; set; }
 
-    public string Icon {get; set;}
+    public string Icon { get; set; }
 
     public string StringName => DataTableManager.StringTable.Get(Name);
     public string StringDesc => DataTableManager.StringTable.Get(Desc);
@@ -27,14 +25,15 @@ public class CharacterData
         return $"{Id} / {Name} / {Desc} / {Attack} / {Defense} / {Icon}";
     }
 
-    
+
 }
 
 public class CharacterTable : DataTable
 {
-    private readonly Dictionary <string, CharacterData> table = new ();
+    private readonly Dictionary<string, CharacterData> table = new();
+    private List<string> keyList;
 
-    public override void Load (string filename)
+    public override void Load(string filename)
     {
         table.Clear();
 
@@ -53,6 +52,8 @@ public class CharacterTable : DataTable
                 Debug.LogError("캐릭터 아이디 중복");
             }
         }
+
+        keyList = table.Keys.ToList();
     }
 
     public CharacterData Get(string id)
@@ -62,6 +63,11 @@ public class CharacterTable : DataTable
             Debug.LogError("캐릭터 아이디 없음");
             return null;
         }
-        return table [id];
+        return table[id];
+    }
+
+    public CharacterData GetRandom()
+    {
+        return Get(keyList[Random.Range(0, keyList.Count)]);
     }
 }

@@ -31,14 +31,16 @@ Character1Defense,Defense : 100
 Character2Defense,Defense : 50
 Character3Defense,Defense : 25
 Character4Defense,Defense : 2
-Name,Name       
-Desc,Description
-Type,Type
-Value,Value
-Cost,Cost
-Weapon,Weapon
-Equip,Equipment
-Consumable,Consumable
+NAME,Name       
+DESC,Description
+TYPE,Type
+VALUE,Value
+COST,Cost
+ATTACK,공격력
+DEFENSE,방어력
+WEAPON,Weapon
+EQUIP,Equipment
+CONSUMABLE,Consumable
 SAVE,Save
 LOAD,Load
 ADDITEM,AddItem
@@ -48,6 +50,3 @@ DATEDESCEND,Date (Descend)
 NAMEASCEND,Name (Ascend)
 NAMEDESCEND,Name (Descend)
 NONE,None
-WEAPON,Weapon
-EQUIP,Equip
-CONSUMABLE,Concumable
