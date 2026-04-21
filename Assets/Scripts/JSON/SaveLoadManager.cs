@@ -24,6 +24,14 @@ public static class SaveLoadManager
     };
     public static SaveDataVC Data { get; set; } = new SaveDataVC();
 
+    static SaveLoadManager()
+    {
+        if (!Load())
+        {
+            Debug.Log("세이브 파일 로드 실패띠음");
+        }
+    }
+
     private static string GetSavefilePath(int slot)
     {
         return GetSavefilePath(slot, Mode);
@@ -96,7 +104,7 @@ public static class SaveLoadManager
         if (!File.Exists(path))
         {
             Debug.LogError("파일 없음");
-            return false;
+            return Save();
         }
 
         try

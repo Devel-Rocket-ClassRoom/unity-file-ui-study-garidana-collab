@@ -1,4 +1,4 @@
-﻿Id,String
+Id,String
 ,
 HELLO,Hello~
 BYE,Bye~
@@ -11,6 +11,10 @@ Item1Desc,This is a sword.
 Item2Desc,This is a shield.
 Item3Desc,This is a bow.
 Item4Desc,This is a potion.
+Item1Type,Weapon
+Item2Type,Equip
+Item3Type,Weapon
+Item4Tpye,Consumable
 Character1Name,FirstSon
 Character2Name,SecondDaughter
 Character3Name,ThirdSon
@@ -27,3 +31,23 @@ Character1Defense,Defense : 100
 Character2Defense,Defense : 50
 Character3Defense,Defense : 25
 Character4Defense,Defense : 2
+Name,Name       
+Desc,Description
+Type,Type
+Value,Value
+Cost,Cost
+Weapon,Weapon
+Equip,Equipment
+Consumable,Consumable
+SAVE,Save
+LOAD,Load
+ADDITEM,AddItem
+REMOVEITEM,RemoveItem
+DATEASCEND,Date (Ascend)
+DATEDESCEND,Date (Descend)
+NAMEASCEND,Name (Ascend)
+NAMEDESCEND,Name (Descend)
+NONE,None
+WEAPON,Weapon
+EQUIP,Equip
+CONSUMABLE,Concumable

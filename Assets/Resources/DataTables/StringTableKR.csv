@@ -11,6 +11,10 @@ Item1Desc,이건검이다.
 Item2Desc,이건방패다.
 Item3Desc,이건활이다.
 Item4Desc,이건포션이다.
+Item1Type,무기
+Item2Type,장비
+Item3Type,무기
+Item4Tpye,소모품
 Character1Name,맏아들
 Character2Name,둘째딸
 Character3Name,셋째아들내미
@@ -27,3 +31,23 @@ Character1Defense,방어력 : 100
 Character2Defense,방어력 : 50
 Character3Defense,방어력 : 25
 Character4Defense,방어력 : 2
+Name,이름    
+Desc,설명
+Type,타입
+Value,밸류
+Cost,코스트
+Weapon,무기
+Equip,장비
+Consumable,소모품
+SAVE,저장
+LOAD,부르기
+ADDITEM,추가
+REMOVEITEM,제거
+DATEASCEND,날짜(오름)
+DATEDESCEND,날짜(내림)
+NAMEASCEND,이름(오름)
+NAMEDESCEND,이름(내림)
+NONE,없음
+WEAPON,무기
+EQUIP,장비
+CONSUMABLE,소모품

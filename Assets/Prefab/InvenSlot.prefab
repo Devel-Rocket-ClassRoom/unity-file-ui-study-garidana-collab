@@ -272,8 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2f260eae7a6e9479cec4ade9574854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIInvenSlot
+  slotIndex: -1
   iamgeIcon: {fileID: 2327611592700228820}
   textName: {fileID: 6141871847803189147}
+  button: {fileID: 8119774335487438773}
 --- !u!1 &5611235655700525392
 GameObject:
   m_ObjectHideFlags: 0
