@@ -1,0 +1,5 @@
+Id,Name,Desc,Attack,Defense,Icon
+Char1,전사,검을 든 전사,100,100,Icon_Helmet02
+Char2,해골,해골 인간,10,10,Icon_Skull03
+Char3,해골2,강화된 해골 인간,120,120,Icon_Skull02
+Char4,해골3,최강의 해골 인간,150,200,Icon_Skull01
