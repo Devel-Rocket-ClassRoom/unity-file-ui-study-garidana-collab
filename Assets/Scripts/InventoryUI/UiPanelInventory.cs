@@ -12,6 +12,7 @@ public class UiPanelInventory : MonoBehaviour
 
     private void OnEnable()
     {
+        uiInvenSlotList.onSelectSlot.AddListener(uiItemInfo.SetSaveItemData);
 
         OnLoad();
         //uiInvenSlotList.SetSaveItemDataList(SaveLoadManager.Data.ItemList);

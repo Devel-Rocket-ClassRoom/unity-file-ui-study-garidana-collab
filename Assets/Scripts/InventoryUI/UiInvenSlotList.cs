@@ -108,17 +108,17 @@ public class UiInvenSlotList : MonoBehaviour
     {
         saveItemDataList = null;
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            AddRandomItem();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            RemoveItem();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Alpha1))
+    //     {
+    //         AddRandomItem();
+    //     }
+    //     if (Input.GetKeyDown(KeyCode.Alpha2))
+    //     {
+    //         RemoveItem();
+    //     }
+    // }
 
     public void SetSaveItemDataList(List<SaveItemData> source)
     {
